@@ -1,0 +1,31 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+h1 {
+  font-size: 1.25em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+.page__content p {
+  font-size: 0.85em;
+}
+
+@media (min-width: 80em) {
+  #main {
+    max-width: 1400px;
+  }
+
+  .masthead__inner-wrap {
+    max-width: 1400px;
+  }
+}

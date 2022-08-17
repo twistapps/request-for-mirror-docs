@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/twistapps/request-for-mirror-docs/compare/1.1.0...1.2.0) (2022-08-17)
+
+
+### Features
+
+* docs for Request v0.4.1 (WIP) ([09bae4b](https://github.com/twistapps/request-for-mirror-docs/commit/09bae4b05403e3fb085f6d3a1ba9069caa35784e))
+
 # [1.1.0](https://github.com/twistapps/request-for-mirror-docs/compare/1.0.0...1.1.0) (2022-08-17)
 
 

@@ -11,9 +11,12 @@ install_instructions: common/installation/recommended.md
 
 ---
 
+**This documentation** is in awful incomplete state, but we are diligently working on making it useful! <br /><br />_Stay calm_ <br />_- the developer_
+{: .notice--warning}
+
 {{site.data.package.displayname}} is a package that extends functionality of 
 [Mirror&nbsp;Networking](https://mirror-networking.com/) for [Unity&nbsp;Engine](https://unity.com), 
-allowing you to define http-like requests with automatic callbacks on response. 
+allowing you to define and handle http-like requests with automatic callbacks on response. 
 [Get Started](#installation){: .btn .btn--primary .btn--primary .btn--info}
 
 ---
@@ -56,10 +59,10 @@ public class Req_Example : Fetch<string>
 {% highlight C# %}Post<RequestType, ResponseType1, ResponseType2, ResponseType3, ResponseType4>{% endhighlight %}
 _Responses 2..4 are optional._
 
-- **Fetch** has a single generic type parameter which is the Response Type.
+- **Fetch** has a single generic type parameter which defines the Response Type for this request.
 
-**RequestType** is what server accepts as *request data*.<br />
-**ResponseType** is what _client_ expects to get back from server as a response. <br />
+**[RequestType](/data-types)** is what server accepts as *[request data](/data-types)*.<br />
+**[ResponseType](/data-types)** is what _client_ expects to get back from server as a response.<br />
 _(as we specify `string` as response type in the example above)_
 
 ---
@@ -67,7 +70,7 @@ _(as we specify `string` as response type in the example above)_
 ### Why use Request instead of standard Mirror workflow?
 Imagine there's some data you need to get from a server,
 but you don't want to synchronize it with [SyncVar]s repeatedly
-(if that data is rarely needed or to abolish some possibilities to cheat).
+(if that data is rarely needed or to restrict access to data by some conditions to prevent cheating).
 
 Then there are two possible solutions:
 - [Interest Management](https://mirror-networking.gitbook.io/docs/interest-management/custom) -

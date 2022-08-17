@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/twistapps/request-for-mirror-docs/compare/1.2.0...1.3.0) (2022-08-17)
+
+
+### Bug Fixes
+
+* add no-known-bugs notice ([d2fad3c](https://github.com/twistapps/request-for-mirror-docs/commit/d2fad3ceb961edd9640c626f34721e2d3dcdfd28))
+* license ([15bb7a3](https://github.com/twistapps/request-for-mirror-docs/commit/15bb7a34993f5ced075f4b7e39cd892c1250e36e))
+
+
+### Features
+
+* new pages ([b2dabb0](https://github.com/twistapps/request-for-mirror-docs/commit/b2dabb06404eae4bdf9abb72c04d9b8f1f181a18))
+* WIP notice, better explanation ([4a4dcbc](https://github.com/twistapps/request-for-mirror-docs/commit/4a4dcbc746f71558e3b98bfd9c76f06378d90f06))
+
 # [1.2.0](https://github.com/twistapps/request-for-mirror-docs/compare/1.1.0...1.2.0) (2022-08-17)
 
 

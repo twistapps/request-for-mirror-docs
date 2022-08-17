@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/twistapps/request-for-mirror-docs/compare/1.0.0...1.1.0) (2022-08-17)
+
+
+### Features
+
+* decrease font sizes and main container width ([e611537](https://github.com/twistapps/request-for-mirror-docs/commit/e611537051b6319a9f71a1ea44cda1eaae84c655))
+
 # 1.0.0 (2022-08-17)
 
 

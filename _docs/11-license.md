@@ -1,7 +1,7 @@
 ---
 title: License
 permalink: /license
-excerpt: "How to use Modula with Mirror"
+excerpt: "Request for Mirror: terms of use"
 
 author_profile: false
 author: Twist Apps
@@ -12,7 +12,7 @@ Copyright (c) 2022 [bloomstick](https://github.com/bloomstick)
 
 ## Summary
 
--   You can freely use Modula in both commercial and non-commercial projects.
+-   You can freely use Request for Mirror in both commercial and non-commercial projects.
 -   You can modify the code only for your own use and you cannot redistribute modified versions.
 
 ## Definitions

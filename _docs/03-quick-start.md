@@ -12,9 +12,9 @@ author: Twist Apps
 
 ---
 
-After [adding Modula to your project](/install), it's time to make your first module!
+After [adding Request For Mirror to your project](/install), it's time to make your first request!
 
-## Creating Modules
+## Creating Requests
 To create a basic module, simply derive from `Module` class. As we imagine, 
 a module should represent a relatively small self-contained part 
 of your bigger entity/behaviour. Some examples, these things could become good modules:

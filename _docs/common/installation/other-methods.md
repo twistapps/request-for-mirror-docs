@@ -8,14 +8,14 @@ After it's published, the link will be available here.)
 - Click "Download"
 - Follow further instructions
 #### `Pros`
-- **Flexibility**: the source code is explicit and possesses its own `Twistapps/Modula` folder.
+- **Flexibility**: the source code is explicit and possesses its own `Twistapps/RequestForMirror` folder.
 
-Choose this method if you want to experiment with Modula's sources yourself.
+Choose this method if you want to experiment with Request's sources yourself.
 {: .notice--success}
 
 ### 3. Manual Installation
 
-- Download [latest release](https://github.com/twistapps/modula/releases/latest)
+- Download [latest release](https://github.com/twistapps/request-for-mirror/releases/latest)
 - Unpack the archive to<br>
 `unity-project-root/Packages` **OR**<br> `unity-project-root/Assets`
 - Enjoy!
@@ -29,6 +29,6 @@ Choose this method if you want to experiment with Modula's sources yourself.
 | Easy to edit sources                                                 | ❌       | ✅           | ✅                                 |
 {: .text-center}
 
-Basically, if you don't want to dig deeper into Modula's source, use the first method. 
+Basically, if you don't want to dig deeper into Request's sources, use the first method. 
 Otherwise, it's your choice :D
 {: .notice--warning}

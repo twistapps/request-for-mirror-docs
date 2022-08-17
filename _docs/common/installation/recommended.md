@@ -1,11 +1,11 @@
 ﻿
-**There are [multiple ways](/install)** to install Modula.<br>
+**There are [multiple ways](/install)** to install Request.<br>
 We recommend using it as [Unity Package Manager (UPM)](https://docs.unity3d.com/Manual/upm-ui.html) Git dependency:
 {: .notice--info}
 ### 1. Recommended Method `(UPM Git Dependency)`
 - In Unity, go to _Window_ ▶ _Package Manager_
 - Click **"+"** ▶ _Add Package from Git URL..._
-- Paste this link: `https://github.com/twistapps/modula.git`
+- Paste this link: `https://github.com/twistapps/request-for-mirror.git`
 - Wait for unity to download the package for you!
 
 [![](/assets/img/modula-installation-git.gif)](/assets/img/modula-installation-git.gif)

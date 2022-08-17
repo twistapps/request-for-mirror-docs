@@ -11,6 +11,8 @@ docs:
           url: /install
         - title: Quick Start
           url: /quick-start
+        - title: Shortcomings
+          url: /under-the-hood
   
   - title: Features
     children:
@@ -23,15 +25,17 @@ docs:
       - title: TimingConstraints
         url: /timing-constraints
 
-  - title: 3rd Party Integration
+  - title: Integration
     children:
       - title: Integrating Other Assets
         url: /integration
-      - title: Mirror Networking
-        url: /integration-mirror
+      - title: Modula
+        url: /integration-modula
   
   - title: Other
     children:
+      - title: To-Do
+        url: /todo
       - title: Known Bugs
         url: /known-bugs
       - title: License

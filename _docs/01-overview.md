@@ -11,8 +11,9 @@ install_instructions: common/installation/recommended.md
 
 ---
 
-{{site.data.package.displayname}} is a package that extends functionality of [Mirror Networking](https://mirror-networking.com/) for [Unity Engine](https://unity.com), allowing you to define http-like requests
-with automatic callbacks on response.
+{{site.data.package.displayname}} is a package that extends functionality of 
+[Mirror&nbsp;Networking](https://mirror-networking.com/) for [Unity&nbsp;Engine](https://unity.com), 
+allowing you to define http-like requests with automatic callbacks on response. 
 [Get Started](#installation){: .btn .btn--primary .btn--primary .btn--info}
 
 ---
@@ -20,25 +21,16 @@ with automatic callbacks on response.
 
 ---
 
-Currently there are types of requests: `Fetch<TRequest>` and `Post<TRequest,TResponse>`.
-Think of these as if you were making a web request: Fetch comes with no request body and Post should have some data sent to the server.
-
-![modula2](https://user-images.githubusercontent.com/26601205/157162945-b4b174e2-c7ce-4d8c-af3d-d07a0f27f20b.gif)
-
-That way by distributing the code into small self-containing modules you could make the codebase cleaner and easier to understand.
+Currently there are two types of requests: `Fetch<TRequest>` and `Post<TRequest,TResponse>`. 
+They mimic `GET` and `POST` functionality from Http protocol respectively: 
+**Fetch** comes with no request body and **Post** should have some data sent to the server.
 
 ## How this Works
-Under the hood this package just uses Mirror's high level `[Command]`'s and `[TargetRPC]` calls to exchange data between server and client.
+Under the hood this package uses Mirror's high level `[Command]`'s 
+and `[TargetRPC]` calls to exchange data between server and client, [with a catch](/under-the-hood) 
+to make it possible to use in derived classes.
 
-### What's wrong with default Mirror workflow?
-If there's some data you need to get from a server, but you don't want to repeatedly synchronize it with [SyncVar]s (don't want to have 'fair play' issues
-or that data is rarely needed), there are two possible solutions:
-- [Interest Management](https://mirror-networking.gitbook.io/docs/interest-management/custom) - this is too complex for simple things
-- *Making a pair of Command and a RPC call to send data then receive a response* - this becomes messy if you have a lot of requests to handle,
-mindfully naming each method and making sure to always call TargetSomething in the end of your command - this is just exhausting. Resulting method pairs still look too decoupled after all.
-- *Using lower level Network Messages* - but we want something **dead simple**, right?
-
-### Creating a request with this package
+### Creating a request with Request
 
 To define a new request type, just create a new class and derive it from **Fetch** or **Post**
 {% highlight C# %}// Without request body, just fetching a response
@@ -57,6 +49,35 @@ public class Req_Example : Fetch<string>
         status = OK;
     }
 }{% endhighlight %}
+
+### Generic type Parameters Are:
+
+- For **Post**:
+{% highlight C# %}Post<RequestType, ResponseType1, ResponseType2, ResponseType3, ResponseType4>{% endhighlight %}
+_Responses 2..4 are optional._
+
+- **Fetch** has a single generic type parameter which is the Response Type.
+
+**RequestType** is what server accepts as *request data*.<br />
+**ResponseType** is what _client_ expects to get back from server as a response. <br />
+_(as we specify `string` as response type in the example above)_
+
+---
+
+### Why use Request instead of standard Mirror workflow?
+Imagine there's some data you need to get from a server,
+but you don't want to synchronize it with [SyncVar]s repeatedly
+(if that data is rarely needed or to abolish some possibilities to cheat).
+
+Then there are two possible solutions:
+- [Interest Management](https://mirror-networking.gitbook.io/docs/interest-management/custom) -
+  this is too complex for simple things
+- *Making a pair of Command (to send data) and an RPC (to receive a response)* -
+  this becomes messy if you have a lot of requests to handle, and it's just exhausting to try to keep everything consistent
+  in terms of naming and functionality.
+  Resulting method pairs still look too decoupled after all.
+- *Using lower level Network Messages* - but we want something **dead simple**, right?
+
 
 Don't be overwhelmed! The only thing that is actually required to handle the request on server is the OnRequest function.
 The OnConnectedToServer method is just how we send the request from client right after it connects to a server.
@@ -108,32 +129,6 @@ a workaround: every time you create a new request type
 
 When you create a request, deriving from a request baseclass, 
 
-## Brief Overview
-
-The final gameobject designed using Modula should consist of these components:
-
-- **[Main](/module-features#main-)** behaviour script
-
-    
-    {% highlight C# %}// Main Behaviour
-    public class Car : ModularBehaviour
-    {
-         // Your code as you do it usually
-         ...
-    }{% endhighlight %}
-
-- Some connected modules
-
-
-    {% highlight C# %}// Example Module
-    public class Engine : Module 
-     {
-         void Start() { ... }
-         
-         ...
-     }{% endhighlight %}
-
-- Other unity Components you need for this system
 
 ## Installation
 {% if page.install_instructions %}
@@ -148,4 +143,4 @@ Check out the [full page](/install#updating) to read the update instructions.
 
 ---
 # Next Steps
-Code your first module by following **[Quick Start](/quick-start) instructions**.
+Create your first request by following **[Quick Start](/quick-start) instructions**.

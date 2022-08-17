@@ -16,8 +16,12 @@ h2 {
   font-size: 1em;
 }
 
-.page__content p {
-  font-size: 0.85em;
+h3 {
+  font-size: 0.9em;
+}
+
+.page__content p, li {
+  font-size: 0.85em !important;
 }
 
 @media (min-width: 80em) {

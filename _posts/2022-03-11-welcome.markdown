@@ -1,0 +1,53 @@
+---
+layout: single
+title:  "Modular Entities: from concept to a package release"
+date:   2022-03-11 16:49:32 +0300
+#categories: jekyll update
+categories: devlog
+
+classes: wide
+
+author_profile: true
+
+---
+
+### In simple words
+
+I decided to put some less abstract examples first in this topic to make sure
+the concept really _clicks_ for you. o/
+{: .notice--success }
+
+_Imagine,_ you have some human characters set up that are able
+to run around on a level of your game.
+All these characters are almost the same,
+but most of them are controlled by AI and the last one should be the player.
+
+Using Modula, you could create a module called `PlayerControls`, and
+the other one - `AiControls`. Then you _write code (as we all like)_,
+specifying how each of these types changes the character's (which that's attached to) movement.
+Then you add _PlayerControls_ to the player character, and _AiControls_ to all the other ones.
+
+_Voila!!_ - You didn't even touch the code inside any other scripts but these new ones you made.
+You don't need to exactly know how human characters work.
+It should be great for team projects,
+or if you forget how your own code works 2 weeks after publishing it.
+
+### But Unity already has Components!
+
+Did I reinvent the bike? Kind of: I really think the component system lacks
+a dependency structure that I'm really looking for: like the soft one.
+
+Soft dependencies say: you **could** have this component, but **don't have to**.
+Imagine you could not only require a component, but also make components **exchangeable**,
+so if you add `ComponentBar` to a GameObject which already contains `ComponentFoo`,
+the last one replaces the first one. That could be useful if you have a well-thought
+concept in your mind and 
+
+## Unify Everything
+
+I really like the brand name - "Unity". But where is some feature in this beautiful engine
+that makes things unified?
+
+I made one, but in a good way: it **splits** the code but **unifies** the application.
+
+What I mean

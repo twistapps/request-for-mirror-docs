@@ -1,0 +1,38 @@
+main:
+  - title: "Changelog"
+    url: https://github.com/twistapps/request-for-mirror/blob/main/CHANGELOG.md
+
+docs:
+  - title: Getting Started
+    children:
+        - title: About
+          url: /
+        - title: Installation
+          url: /install
+        - title: Quick Start
+          url: /quick-start
+  
+  - title: Features
+    children:
+      - title: Modular Behaviour
+        url: /behaviour-features
+      - title: Modules
+        url: /module-features
+#      - title: DataLayer
+#        url: /data-layer #todo
+      - title: TimingConstraints
+        url: /timing-constraints
+
+  - title: 3rd Party Integration
+    children:
+      - title: Integrating Other Assets
+        url: /integration
+      - title: Mirror Networking
+        url: /integration-mirror
+  
+  - title: Other
+    children:
+      - title: Known Bugs
+        url: /known-bugs
+      - title: License
+        url: /license

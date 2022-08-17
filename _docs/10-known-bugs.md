@@ -9,6 +9,6 @@ author: Twist Apps
 integr_mirror: common/integrations/mirror.md
 ---
 
-When toggling debug mode of ModularBehaviour, hideFlags are changing only after hovering
-on Scene window with mouse
+There are no known bugs atm. Please [open an Issue on Github](https://github.com/twistapps/request-for-mirror/issues/new)
+if you encounter any.
 {: .notice}
